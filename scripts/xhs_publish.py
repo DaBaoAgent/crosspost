@@ -13,23 +13,31 @@ from xhs import XhsClient
 from xhs.help import sign
 
 # ================ 配置区 ================
-# 从小红书 creator.xiaohongshu.com → F12 → Application → Cookies 复制完整 Cookie 字符串
-COOKIE = "你的完整Cookie字符串"
+# Cookie 从统一文件读取（避免硬编码过期）
+COOKIE_FILE = os.path.expanduser(r"~\.hermes\data\xhs_cookie_latest.txt")
+with open(COOKIE_FILE, encoding='utf-8') as f:
+    COOKIE = f.read().strip()
 
 def sign_wrapper(uri, data=None, a1="", web_session=""):
     """纯Python签名，无需Playwright。a1必须keyword传参"""
     return sign(uri, data, a1=a1)
 
 # 素材文件夹（每个子文件夹5张图 = 1个帖子）
-FOLDER = Path(r"D:\BaiduSyncdisk\8 本地推素材\chatgtp出图\4")
+FOLDER = Path(r"D:\BaiduSyncdisk\8 本地推素材\@自动发图文素材库\大宝小红书\29-已发(抖音)")
 files = sorted([str(f) for f in FOLDER.glob("*.png")] + [str(f) for f in FOLDER.glob("*.jpg")])
 
 # 文案（标题≤20字，正文无emoji）
-TITLE = "昆山轮椅出租同城配送"
-DESC = """昆山也有轮椅出租啦，同城快速配送上门
-受伤临时租用、旅游代步、老人出行统统搞定
-品牌佳康顺，几乎全新，干净卫生
-全昆山可自取/包邮到家
+TITLE = "爸妈来苏州旅游？昆山轮椅日租✨"
+DESC = """爸妈来苏州玩走不动路？别让出行成为遗憾👨‍👩‍👧
+
+昆山佳康顺轮椅日租来帮忙！几乎全新品牌轮椅，干净卫生，每次用完都深度消毒🧹
+
+全昆山可自取，也可以配送到家，超方便🚗
+
+不管是老人出行、术后康复还是临时受伤，随租随用，不用了随时还～
+
+👉 点主页了解更多，或直接私信咨询
+
 📍昆山佳康顺UNQ
 
 #轮椅出租 #轮椅租赁 #出行辅助 #昆山轮椅 #佳康顺"""

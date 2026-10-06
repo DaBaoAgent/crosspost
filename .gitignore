@@ -19,3 +19,8 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# temp publish artifacts
+_msg.txt
+tree.json
+_tree.json

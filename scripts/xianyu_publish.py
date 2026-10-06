@@ -18,24 +18,28 @@ FOLDER = Path(r"D:\BaiduSyncdisk\8 本地推素材\chatgtp出图\4-已发(三平
 files = sorted([str(f.absolute()) for f in FOLDER.glob("*.png")] +
                [str(f.absolute()) for f in FOLDER.glob("*.jpg")])
 
-DESC = """昆山也有轮椅出租啦，最低只要15元/天起
-受伤临时租用、旅游代步、老人出行统统搞定
-最低只要15元/天起，押金仅需300元
-品牌佳康顺，几乎全新，干净卫生
-全昆山可自取/包邮到家
+DESC = """昆山轮椅出租💪最低15元/天，押金仅需300元！
+
+受伤临时租用、术后康复、旅游代步、老人出行统统搞定
+
+品牌佳康顺，几乎全新轮椅，每次使用完都深度消毒，干净卫生
+
+全昆山可自取/包邮到家📍张浦俱巷路625号
+
+不用了随时还，没有任何隐形费用。点右下角「我想要」直接咨询～
+
 #轮椅出租 #轮椅租赁 #出行辅助 #昆山轮椅 #佳康顺"""
 
 COOKIES = [
-  # 从 Chrome F12 → Application → Cookies → www.goofish.com 复制以下9个关键Cookie:
-  {"name":"cookie2","value":"你的cookie2值","domain":".goofish.com","path":"/","httpOnly":True,"secure":True,"sameSite":"None"},
-  {"name":"_tb_token_","value":"你的值","domain":".goofish.com","path":"/"},
-  {"name":"cna","value":"你的值","domain":".goofish.com","path":"/"},
-  {"name":"havana_lgc2_77","value":"你的值","domain":".goofish.com","path":"/","httpOnly":True},
-  {"name":"unb","value":"你的值","domain":".goofish.com","path":"/"},
-  {"name":"_m_h5_tk","value":"你的值","domain":".goofish.com","path":"/"},
-  {"name":"sgcookie","value":"你的值","domain":".goofish.com","path":"/","httpOnly":True},
-  {"name":"csg","value":"你的值","domain":".goofish.com","path":"/"},
-  {"name":"tfstk","value":"你的值","domain":".goofish.com","path":"/"},
+  {"name":"cookie2","value":"17239466e5a3c290351ef5edd2159231","domain":".goofish.com","path":"/","httpOnly":True,"secure":True,"sameSite":"None"},
+  {"name":"_tb_token_","value":"b335933e8d58","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
+  {"name":"cna","value":"QJR9IjqKFSUCAXAUZJck96eK","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
+  {"name":"havana_lgc2_77","value":"eyJoaWQiOjIwNDgyNzc5NDIsInNnIjoiNzdmOTk3MWJiNzNlNjgxYTE0OWM3OGE3MDMzYzgxNzkiLCJzaXRlIjo3NywidG9rZW4iOiIxMVVCZGVaeVJYcVRDR0RkLTlidHlCdyJ9","domain":".goofish.com","path":"/","httpOnly":True,"secure":True,"sameSite":"None"},
+  {"name":"unb","value":"2048277942","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
+  {"name":"_m_h5_tk","value":"8348c84db1574c65a93878a481104ada_1779116830409","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
+  {"name":"sgcookie","value":"E100tL14RFZCimo5Ssz1FCYZJ5NhOBjcwdP4XCpMugPzvvsu7/cYHYDAV1QxC0Sp/0LEVf+sXTODQuVfI3dNgHWM86n/8il2PwwCPdvH30BLLNU=","domain":".goofish.com","path":"/","httpOnly":True,"secure":True,"sameSite":"None"},
+  {"name":"csg","value":"fd92a5f9","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
+  {"name":"tfstk","value":"gTvII-vcry4BtWnKyyoacye1bLXSbck4PusJm3eU29BLyzKA7e7FL0D5yebwLw-FpYsJuFT5ZDbPyaTy2BoZ3x-HxTXJPqkq3P4mRj9CyzWRKOhePtTI3x-HvkSK0hH2a2Y3Zg_Re6C-BhQG0WEpy6COBNjl2yIR2ctOSNU8JTQRB1IhczBReUKtfgbOyTCJyhn1qNQ-Cbg1jX_pA0q3_6tIF8SC58eJCM3lkH_1jGv1A6_ATNwRYdsCOZKpHilRBGpwCs5a4V69mC8dftMQoMO9c9IWEmF5P_9hCgOiRW8X-gKO1eozZGOW2KXhhuHpf9_CMLTTDRTvf3dV1doxn96dJQWH4ogefpTexdtz25BCLC1XdtH0JaRwcLsWE4D6l3KDw197Rgr73ZG2y7Z1i8s1uci_Z7bRn9_gLTjbS6IGbKosfyNl9Gj1uci_Z7fdjG5qfcaQZ","domain":".goofish.com","path":"/","httpOnly":False,"secure":True,"sameSite":"None"},
 ]
 
 log(f"📁 {FOLDER.name}: {len(files)}张图")
